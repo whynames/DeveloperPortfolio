@@ -323,20 +323,23 @@ img {
 }
 .video-grid {
   display: grid;
-  row-gap: 3rem;
-    column-gap: 2rem;
-    padding-top: 2rem;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .video-item {
-  position: relative;
-  width: 100%;
-  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.video-item iframe {
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Aspect ratio (16:9) */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
