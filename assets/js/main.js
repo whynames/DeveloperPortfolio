@@ -56,7 +56,48 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 sr.reveal('.video-item, .video-title, .video-title',{interval: 60}); 
-
-video-item
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
+   document.getElementById('sendEmailBtn').addEventListener('click', function() {
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // Body only contains the message
+        const body = message;
+
+        const mailtoLink = "mailto:botansahin27@gmail.com" + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        
+        window.location.href = mailtoLink;
+    });
+
+/* document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+    
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // You can send the form data to your server using fetch or XMLHttpRequest
+    // For this example, let's just log the data to the console
+    console.log("Name: " + name);
+    console.log("Email: " + email);
+    console.log("Message: " + message);
+
+    // Here you can add code to send the form data to your server using fetch or XMLHttpRequest
+    // Example:
+    // fetch('your_server_url', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ name, email, message }),
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //     console.log('Success:', data);
+    // })
+    // .catch((error) => {
+    //     console.error('Error:', error);
+    // });
+}); */
